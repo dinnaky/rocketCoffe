@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Sem preview por enquanto
+  <img src=".github/preview.jpg">
 </p>
 
 ## O projeto:
