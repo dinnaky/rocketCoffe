@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src=".github/preview.jpg">
+  <img src="github/preview.jpg">
 </p>
 
 ## O projeto:
