@@ -11,10 +11,9 @@
     <title>Home | Rocket Coffee</title>
 </head>
 <body>
-    <header>
-        
+    <header>    
         <div class="logo"></div>
-        <nav class="menu-onclick">
+        <nav>
             <ul>
                 <li><a href="#">Home</li></a>
                 <li><a href="#">Menu</li></a>
@@ -25,17 +24,26 @@
         </nav>
         <a href="#" class="button-header">Pegar meu café</a>
 
-        <div class="menu-burger"></div>
+        <div class="menu-burger" onclick="menuClick()"></div>
     </header>
 
     <main>
         <div class="content">
             <div class="text-principal">
-                <h1>Great Coffee</h1>
-                <h1 class="text">&lt;Great Code/&gt;</h1>
+                <div class="displayNone">
+                    <h2>O café que fará seu código decolar para 
+                    o próximo nível.</h2>
+                    <a href="#" class="button-header button-onclick">Pegar meu café</a>
+                </div>
+                <div>
+                    <h1>Great Coffee</h1>
+                    <h1 class="text">&lt;Great Code/&gt;</h1>
+                 </div>
             </div>
             <img src="assets/coffee.png" alt="">
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

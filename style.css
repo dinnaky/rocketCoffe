@@ -121,8 +121,22 @@ header ul li a:hover {
     display: none;
     background-image: url(assets/menu-buguer-open.svg);
     background-repeat: no-repeat;
+    background-position: center;
     width: 5vh;
-    height: 2vh;
+    height: 4vh;
+    cursor: pointer;
+}
+
+.close-burger {
+    background-image: url(assets/menu-buguer-close.svg);
+}
+
+h2 {
+    display: none;
+}
+
+.button-onclick {
+    display: none;
 }
 
 
@@ -132,15 +146,23 @@ header ul li a:hover {
     body {
         background-image: url("assets/blur-mobile.png");
         background-position: bottom;
+        background-size: cover;
+        
+    }
+
+    * {
+        overflow-x: hidden;
     }
 
     header {
         justify-content: space-evenly;
+        overflow: hidden;
     }
 
     .logo {
         background-image: url(assets/logo-mobile.svg);
         width: 30vh;
+        cursor: pointer;
     }
 
 
@@ -152,29 +174,104 @@ header ul li a:hover {
         display: block;
     }
 
-    ul {
-        display: block;
-        transform: translateX(100%);
-    }
-
     nav {
         display: none;
+        animation: side-out .2s;
     }
 
     .menu-onclick {
-        background-color: var(--backgrond);
+        transform: translate(0, 55%);
         display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background-color: #000;
+        animation-name: navLinkFade;
+        animation-duration: .2s;
     }
 
     .menu-onclick ul{
         display: flex;
         flex-direction: column;
-        font-size: 18px;
-        gap: 20px;
-        position: absolute;
-        width: 100vw;
-        height: 100%;
-        background-color: var(--backgrond);
-        transform: translate(0, 10%);
+        gap: 0;
+        margin: 0px;
+
+    }
+
+    .menu-onclick ul li {
+        border: 1px solid var(--border);
+        padding: 20px 10px;
+
+    }
+
+    .menu-onclick ul li:hover {
+       border-left: 8px solid var(--button-hover);
+    }
+
+    .menu-onclick ul li a {
+        color: #A8A8B3;
+     }
+
+     .menu-onclick ul li a:hover {
+        color: var(--text-color);
+     }
+
+    .button-onclick {
+        display: block;
+     }
+
+    h2 {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 4em;
+    }
+
+    .button-onclick {
+        font-size: 20px;
+        display: inline;
+    }
+
+    .text-principal {
+        font-size: 22px
+    }
+
+    .displayNone {
+        overflow-y: hidden;
+        padding: 1em 0;
+        margin: 4em 0;
+
+    }
+
+    .content img {
+        width: 70%;
+        transition: all .2s;
+}
+}
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translate(200%, 55%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 55%);
     }
 }
+
+@keyframes side-out {
+    from {
+        opacity: 1;
+        transform: translate(0, 55%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(200%, 55%);
+    }
+}
+
+
+
+  
