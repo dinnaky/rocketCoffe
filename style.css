@@ -238,7 +238,7 @@ h2 {
     }
 
     .displayNone {
-        overflow-y: hidden;
+        overflow-x: hidden;
         padding: 1em 0;
         margin: 4em 0;
 
